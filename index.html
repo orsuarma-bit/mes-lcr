@@ -690,21 +690,8 @@ function openRestore() {
 }
 
 /* ---------- Notes de départ (novembre-décembre 2026) ---------- */
-const MES_NOTES = `Novembre
-05/11/2026 Colombi 1094
-07/11/2026 Umarex 693
-13/11/2026 Colombi 353
-23/11/2026 Umarex 107
-26/11/2026 cor Caroli 1652
-30/11/2026 Europarm 826+463
-30/11/2026 Rivolier 1756 + 337 + 1361 + 317
-30/11/2026 Humbert 6448
-30/11/2026 BGM 1532+ 1100
-30/11/2026 Sidam 416+906
-Décembre
-08/12/2026 Browning 360€
-31/12/2026 Humbert 6580,12€`;
-const seedBanner = () => db.seed1 ? '' : `<div class="seed"><div><b>Tes LCR de novembre et décembre sont prêtes</b><span>Reprises de ton fichier note : 18 LCR à vérifier puis ajouter.</span></div>
+const MES_NOTES = '';
+const seedBanner = () => (db.seed1 || !MES_NOTES) ? '' : `<div class="seed"><div><b>Tes LCR de novembre et décembre sont prêtes</b><span>Reprises de ton fichier note : 18 LCR à vérifier puis ajouter.</span></div>
   <div class="acts"><button class="btn" data-act="seed">Voir et ajouter</button><button class="linkbtn" data-act="noseed">Masquer</button></div></div>`;
 
 /* ---------- Import depuis le fichier note ---------- */
