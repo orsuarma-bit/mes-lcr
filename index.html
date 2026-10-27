@@ -731,7 +731,7 @@ function parseNotes(text) {
 function openImport(prefill) {
   openSheet(`<h2>Importer mes notes</h2>
   <p class="hint">Collez vos lignes telles quelles. Une ligne par échéance : la date, le fournisseur et le montant. Plusieurs montants reliés par « + » donnent une LCR chacun. Si une ligne a deux dates, la première est la date de facture. Les titres de mois et les lignes de total sont ignorés.</p>
-  <textarea class="big" id="imTxt" placeholder="Novembre&#10;05/11 Colombi 1094&#10;30/11 Europarm 826+463&#10;Bureau Plus fact 20/10/26 éch 15/11/26 148,90 €">${esc(prefill || '')}</textarea>
+  <textarea class="big" id="imTxt" placeholder="Novembre&#10;05/11 Fournisseur A 1094&#10;30/11 Fournisseur B 826+463&#10;Bureau Plus fact 20/10/26 éch 15/11/26 148,90 €">${esc(prefill || '')}</textarea>
   <div class="acts"><button class="btn sec" id="imParse">Analyser</button></div>
   <div class="preview" id="imPrev"></div>
   <div class="acts"><button class="btn" id="imGo" hidden></button><button class="btn sec" id="imClose">Fermer</button></div>`);
